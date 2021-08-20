@@ -1,0 +1,143 @@
+.NavbarItems {
+  background: hsl(13, 100%, 72%);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.navbar-logo {
+  color: #fff;
+  justify-self: start;
+  margin-left: 40px;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 40vw;
+  justify-content: flex-start;
+  margin-right: 6rem;
+  margin-left: 6rem;
+}
+
+.nav-links {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.nav-links:hover {
+  text-decoration: underline;
+  transition: all 0.2s ease-out;
+}
+
+.fa-bars {
+  color: #fff;
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+  .NavbarItems {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 450px;
+    position: absolute;
+    top: 80px;
+    left: 110%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  }
+
+  .nav-menu.active {
+    background: #fff;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  .nav-links {
+    color: hsl(240, 10%, 16%);
+    font-size: 25px;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-links:hover {
+    color: hsl(13, 100%, 72%);
+    border-radius: 0;
+  }
+
+  .navbar-logo {
+    position: absolute;
+    margin-top: -5px;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+
+  .menu-icon {
+    display: flex;
+    position: absolute;
+    margin-top: 10px;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  
+  .fa-times {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .nav-links-mobile {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 50px;
+    width: 130px;
+    text-decoration: none;
+    color: hsl(240, 10%, 16%);
+    font-size: 18px;
+  }
+
+  .nav-links-mobile:hover {
+    background: hsl(353, 100%, 62%);
+    color: #fff;
+    transition: 250ms;
+  }
+
+  Button {
+    display: none;
+  }
+}

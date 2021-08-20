@@ -1,5 +1,6 @@
+import './App.css';
 import GlobalStyle from "./globalStyles";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero"
 import DesignSection from "./components/DesignSection";
 import MiddleSection from "./components/MiddleSection";
