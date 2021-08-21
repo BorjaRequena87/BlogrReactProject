@@ -29,6 +29,15 @@ const Title = styled.p`
   font-size: 55px;
   color: #fff;
   font-weight: 400;
+
+  @media (max-width: 650px) {
+    font-size: 50px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 40px;
+    width: 370px;
+  }
 `;
 
 const Desc = styled.p`
@@ -37,6 +46,11 @@ const Desc = styled.p`
   color: #fff;
   line-height: 30px;
   margin-top: 25px;
+
+  @media (max-width: 650px) {
+    font-size: 20px;
+    width: 375px;
+  }
 `;
 
 const ButtonContainer = styled.div`
@@ -66,6 +80,12 @@ const Button = styled.a`
     background: #fff;
     transition: 200ms ease-in;
   }
+
+  @media (max-width: 650px) {
+    background: transparent;
+    border: 1px solid;
+    border-color: #fff;
+  }
 `;
 
 const Hero = () => {
@@ -79,10 +99,10 @@ const Hero = () => {
           Grow your audience and build your online brand
         </Desc>
         <ButtonContainer >
-            <Button href="https://www.blogger.com/about/?bpli=1" target="_blank">
+            <Button target="_blank">
               <span>Start for free</span>
             </Button>
-            <Button href="https://www.blogger.com/about/?bpli=1" target="_blank">
+            <Button target="_blank">
               <span>Learn more</span>
             </Button>
           </ButtonContainer>

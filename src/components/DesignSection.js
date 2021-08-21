@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import EditorImgDesktop from '../assets/illustration-editor-desktop.svg'
-// import EditorImgMobile from '../assets/illustration-editor-mobile.svg'
+import EditorImgMobile from '../assets/illustration-editor-mobile.svg'
 
 const Section = styled.section`
   background-image: url(${EditorImgDesktop});
@@ -14,6 +14,16 @@ const Section = styled.section`
   margin-right: -16vw;
   margin-top: -5vw;
   padding: 10rem 0;
+
+  @media (max-width: 375px) {
+    background-image: url(${EditorImgMobile});
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    margin-right: -7vw;
+    margin-top: -60vw; 
+  }
 `;
 
 const Content = styled.div`
@@ -30,6 +40,14 @@ const Content = styled.div`
   text-align: left;
   max-width: 1300px;
   padding: 0 50px;
+
+  @media (max-width: 375px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 380px;
+  }
 `;
 
 const Title = styled.p`
@@ -41,11 +59,25 @@ const Title = styled.p`
   align-items: center;
   justify-content: center;
   margin-right: 16vw;
+
+  @media (max-width: 375px) {
+    margin-top: 125px;
+    margin-left: 19px;
+  }
 `;
 
 const FirstBlock = styled.div`
   text-align: left;
   width: 455px;
+
+  @media (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 260px;
+  }
 `;
 
 const SecondBlock = styled.div`

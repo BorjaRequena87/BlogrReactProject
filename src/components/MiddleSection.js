@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PhonesImg from '../assets/illustration-phones.svg'
 import BackImg from '../assets/bg-pattern-circles.svg'
+import './MiddleSection.css';
 
 const Container = styled.section`
   padding: 80px 60px;
@@ -14,6 +15,14 @@ const Container = styled.section`
   border-top-right-radius: 150px;
   border-bottom-left-radius: 150px;
   max-height: 410px;
+
+  @media (max-width: 375px) {
+    padding: 60px 40px;
+    margin-top: 585px;
+    max-height: 585px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+  }
 `;
 
 const Wrap = styled.div`
@@ -22,6 +31,14 @@ const Wrap = styled.div`
   justify-content: center;
   max-width: 1000px;
   margin: 0 auto;
+
+  @media (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 300px;
+    margin: 0 auto;
+  }
 `;
 
 const Column = styled.div`
@@ -35,6 +52,12 @@ const Image = styled.div`
   position: relative;
   height: 470px;
   top: -140px;
+
+  @media (max-width: 375px) {
+    position: relative;
+    height: 80px;
+    top: -250px;
+  }
 `;
 
 const Title = styled.div`
@@ -43,12 +66,21 @@ const Title = styled.div`
   margin-top: 50px;
   margin-bottom: 20px;
   font-weight: bold;
+
+  @media (max-width: 375px) {
+    text-align: center;
+  }
 `;
 
 const Desc = styled.p`
   font-size: 14px;
   color: #fff;
   line-height: 30px;
+
+  @media (max-width: 375px) {
+    text-align: center;
+    width: 283px;
+  }
 `;
   
 const MiddleSection = () => {
@@ -57,7 +89,7 @@ const MiddleSection = () => {
       <Wrap> 
         <Column>
           <Image >
-            <img src={PhonesImg} alt="PhoneImg" />
+            <img className="PhonesImage" src={PhonesImg} alt="PhoneImg" />
           </Image>
         </Column>
         <Column>

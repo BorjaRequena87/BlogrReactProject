@@ -30,6 +30,13 @@ const Content = styled.div`
   text-align: left;
   max-width: 1300px;
   padding: 0 50px;
+
+  @media (max-width: 375px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const FirstBlock = styled.div`
@@ -41,6 +48,16 @@ const SecondBlock = styled.div`
   width: 455px;
   margin: 0 auto;
   padding-top: 25px;
+
+  @media (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 16vw;
+    width: 270px;
+  }
 `;
 
 const Subtitle = styled.p`
