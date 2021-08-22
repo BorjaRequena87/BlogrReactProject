@@ -18,6 +18,12 @@ const Container = styled.section`
 
   @media (max-width: 375px) {
     padding: 60px 40px;
+    background-image: url(${BackImg});
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: hsl(237, 23%, 32%);
     margin-top: 585px;
     max-height: 585px;
     border-top-right-radius: 100px;

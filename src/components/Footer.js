@@ -8,6 +8,14 @@ const FooterContainer = styled.div`
   padding: 80px 60px;
   background: hsl(240, 10%, 16%);
   border-top-right-radius: 150px;
+
+  @media (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 350px;
+  }
 `;
 
 const FooterWrap = styled.div`
@@ -23,6 +31,11 @@ const Column = styled.div`
   flex-direction: column;
   text-align: left;
   margin-left: 60px;
+
+ @media (max-width: 375px) {
+    text-align: center;
+    margin: 0 auto;
+  } 
 `;
 
 const Row = styled.div`

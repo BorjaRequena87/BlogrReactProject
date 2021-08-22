@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import SecondSectionImgDesktop from '../assets/illustration-laptop-desktop.svg'
-// import SecondSectionImgMobile from '../assets/illustration-laptop-mobile.svg'
+import SecondSectionImgMobile from '../assets/illustration-laptop-mobile.svg'
 
 const Section = styled.section`
   background-image: url(${SecondSectionImgDesktop});
@@ -14,6 +14,17 @@ const Section = styled.section`
   margin-top: -5vw;
   margin-bottom: -5vw;
   padding: 10rem 0;
+
+  @media (max-width: 375px) {
+    background-image: url(${SecondSectionImgMobile});
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75%;
+    margin-right: -30vw;
+    margin-left: -30vw;
+    margin-top: -80vw; 
+  }
 `;
 
 const Content = styled.div`
@@ -36,6 +47,8 @@ const Content = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-top: 460px;
+    margin-left: 15vw;
   }
 `;
 
